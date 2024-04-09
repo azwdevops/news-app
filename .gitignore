@@ -3,3 +3,4 @@
 **/.env
 README_LOCAL.md
 **/database
+**/fakeData.js

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@components/*": ["./app/components/*"],
+      "@hooks/*": ["./app/hooks/*"],
+      "@cards/*": ["./app/components/cards/*"],
+      "@screens/*": ["./app/components/screens/*"],
+      "@common/*": ["./app/components/common/*"],
+      "@lists/*": ["./app/components/lists/*"],
+      "@navigation/*": ["./app/components/navigation/*"],
+    }
+  }
+}

@@ -4,6 +4,7 @@ const {
   getAllNews,
   getSingleNews,
   getCategoryNews,
+  searchPosts,
 } = require("../controllers/newsController");
 const uploads = require("../middleware/multer");
 const { validator, result, validateFile } = require("../middleware/validator");
@@ -20,6 +21,7 @@ router.post(
 );
 router.get("/news", getAllNews);
 router.get("/news/single/:id", getSingleNews);
-router.get("/news/category/:category", getCategoryNews);
+router.get("/news/category/:category/:qty?", getCategoryNews);
+router.get("/news/search/:query", searchPosts);
 
 module.exports = router;

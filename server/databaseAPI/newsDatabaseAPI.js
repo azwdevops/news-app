@@ -49,6 +49,17 @@ class News {
       (item) => item.category === category && delete item.content
     );
   }
+
+  async searchPosts(query) {
+    try {
+      const data = await this.getAll();
+      return data.filter((news) =>
+        news.title.toLowerCase().includes(query.toLowerCase())
+      );
+    } catch (error) {
+      console.log("Error while searching posts");
+    }
+  }
 }
 
 module.exports = News;
